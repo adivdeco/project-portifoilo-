@@ -417,18 +417,7 @@ header button{
     justify-content: center;
 }
 
-/* .achivments{
-    margin-top: 10%;
-    height: 20%;
-    width: 100%;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: capitalize;
-    font-family: cursive;
-    font-size: 3vw;
-} */
 
 /* page3 k andar ka container  */
 .banner{
@@ -578,8 +567,270 @@ header button{
 }
 
 
+/* responsive-ness.. */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (max-width: 400px) {
+    
+    
+    
+    /* hellow anim p jo circle hai us ka animation */
+    
+    .background{
+        height: 350px;
+        width:350px;
+        animation: circle 5s alternate infinite;
+       
+    }
+    
+    @keyframes circle {
+        0%{
+            transform: translate(0px,-100px);
+        }
+        100%{
+            transform:translate(0px,50px);
+        }
+    }
+    
+    .page2{
+        width: 100vw;
+        height: 100vh;
+    }    
+   
+    
+   .page2 h1 {
+        font-size: 3em;
+        text-align: center;
+    }
+    /* page2 k andar ka box  */
+    .container2{
+        height: 103%;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        width: 97%;
+        overflow: hidden;
+    }
+    
+    /* jisme logo or setting hai us ka container hai */
+    header{
+        background-size: 20px ;       
+        height: 12vw; 
+        
+    }
+    
+    .logo{
+        left: -10.9%;
+        scale: 0.7;
+        
+    }
+
+    /* setting k andar walla container ji m home vegra hai */
+    .setting{
+      display:none
+    }
+
+    /* header button{
+        padding: 5px;
+        width: 30px;
+        height: 26px;
+        font-size: 15px;
+        border: none;
+        border-radius: 40%;
+        
+        
+    }   */
+      /* .spot {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      } */
+      
+      /* .svg-wrapper {
+        margin-top: 0;
+        position: relative;
+        width: 150px;
+        height: 40px;
+        display: inline-block;
+        border-radius: 3px;
+        margin-left: 5px;
+        margin-right: 5px
+     } 
+    
+      #text {
+        margin-top: -35px;
+        text-align: center;
+    }  
+      #text a {
+        color: white;
+        text-decoration: none;
+        font-weight: 100;
+        font-size: 1.1em;
+    } 
+      .svg-wrapper:hover #shape {
+        stroke-dasharray: 50 0;
+        stroke-width: 3px;
+        stroke-dashoffset: 0;
+        stroke: #06D6A0;
+    } */
+    
+    
+    /* container k andar walla or header k niche wala  */
+    .content{
+        display:block;
+        align-items: center;
+        height: fit-content;
+    }
+    
+    /* left part of content  */
+    .picture1{
+    
+        height: 40%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background: #000; */
+    }
+    
+    .ovale2{
+        box-shadow: 30px 10px 160px 90px rgba(3, 225, 173, 0.621),
+        inset 0px 0px 100px 0px rgba(7, 185, 229,0.8);
+        top: 42%;  
+        
+    }
+    @keyframes ghum {
+        0%{
+            transform: translate(20%,100%);
+        }
+        50%{
+            transform: translate(50%,10%);
+        }
+        100%{
+            transform: translate(90%,-30%); 
+        }
+    }
+    
+    .rectangle img{
+        height: 53vw;
+        width: 61vw;
+        position: relative;
+        /* left: -34%; */
+        top: -4%;
+        
+    }
+    
+    /* right side of content part.. */
+    .information{
+        width: 100%;
+        /* background: #7f2121; */
+    }
+    
+    .information h1{
+        position: relative;
+        left: 0%;
+        margin-top: 7%;
+        letter-spacing: 5px;
+        font-family:system-ui, -apple-system, 
+        BlinkMacSystemFont, 'Segoe UI', Roboto,
+         Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+         'Helvetica Neue', sans-serif ;
+         font-size: 3.2vw;
+    }
+    
+    .information p{
+        position: relative;
+        left: 11%;
+        letter-spacing: 2px;
+        font-family: cursive;
+        width: 80%;
+        text-align: center;
+    }
+    .information h1 a{
+        color: aquamarine;
+        text-shadow: 2px 3px 20px aquamarine;
+    }
+    
+    /* social media container */
+    .socialmedia{
+        display: flex;
+        position: absolute;
+        left: 10%;
+       top: 0%;
+        margin-top: 5%;
+      
+        /* background-color: #121212; */
+        font-size: 2vw;  gap: 2vw;
+        
+    }
+    /* socoal media box.. */
+    .socialmedia li{
+        list-style: none;
+        height: 50px;
+        margin: 0 10px;
+        width: 50px;
+        position: relative;
+        
+        background-color: #091921;
+        border-radius: 50%;
+        display: inline-flex;
+        cursor: pointer;
+        box-shadow: -1px -1px 3px rgba(244, 26, 26),
+                     -2px -2px 6px rgba(0, 0,0);
+    }
+    /* to bring one more circle in background or make it more fantastic */
+    .socialmedia li::before{
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 50%;
+        height: 45px;
+        width: 45px;
+        transform: translate(-50%,-50%);
+        background-color: #091921;
+        border-radius: 50%;
+        box-shadow: inset -3px -1px 3px rgba(255, 255,255,0.1),
+                  inset  2px 2px 6px rgba(177, 46, 46, 0.821)  ;
+    } 
+    
+    .socialmedia li:hover{
+        background-color: aquamarine;
+        box-shadow: 0px 0px 10px 7px aquamarine;
+    
+    }
+    /* yha p aanimation add krna hai ..yaad se kr dena .. */
+    
+    .socialmedia li a{
+       color: #b6bbc5;
+       font-size: 25px;
+       width: 100%;
+       line-height: 54px;
+       position: relative;
+       left: 12px;
+       z-index: 2;
+    }
+
+
+}
 
 /* styles.css */
 

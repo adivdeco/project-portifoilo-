@@ -1,2 +1,5 @@
+# Ignore the src folder
+src/
 
-/src/
+# Ignore the css folder
+

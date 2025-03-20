@@ -512,7 +512,7 @@ header button{
 .movingpart{
     overflow-x :auto;
     white-space: nowrap;
-    /* margin-top: 15vw; */
+  
 }
  .movingpart::-webkit-scrollbar{
     display: none;
@@ -565,7 +565,12 @@ header button{
     position:relative;
     left: 0%;
 }
-
+.projects-showcase{
+    display: none;
+}
+.videocard{
+    display: none;
+}
 
 /* responsive-ness.. */
 
@@ -612,7 +617,7 @@ header button{
     
     .page2{
         width: 100vw;
-        height: 100vh;
+        height: 95vh;
     }    
    
     
@@ -622,9 +627,9 @@ header button{
     }
     /* page2 k andar ka box  */
     .container2{
-        height: 103%;
+        height: 100%;
         padding-top: 30px;
-        padding-bottom: 50px;
+        /* padding-bottom: 50px; */
         width: 97%;
         overflow: hidden;
     }
@@ -699,17 +704,18 @@ header button{
         display:block;
         align-items: center;
         height: fit-content;
+        padding-bottom:60px ;
+        /* padding-top: 40px; */
     }
     
     /* left part of content  */
     .picture1{
-    
-        height: 40%;
+        height: 30vh;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        /* background: #000; */
+        /* background: #d43c3c; */
     }
     
     .ovale2{
@@ -731,7 +737,7 @@ header button{
     }
     
     .rectangle img{
-        height: 53vw;
+        height: 63vw;
         width: 61vw;
         position: relative;
         /* left: -34%; */
@@ -767,7 +773,9 @@ header button{
     }
     .information h1 a{
         color: aquamarine;
-        text-shadow: 2px 3px 20px aquamarine;
+        /* text-shadow: 2px 7px 60px  aquamarine; */
+        font-size: larger;
+        text-shadow: 0 0 2px aquamarine, 0 0 10px aquamarine, 0 0 80px aquamarine, 0 0 80px aquamarine;
     }
     
     /* social media container */
@@ -777,8 +785,6 @@ header button{
         left: 10%;
        top: 0%;
         margin-top: 5%;
-      
-        /* background-color: #121212; */
         font-size: 2vw;  gap: 2vw;
         
     }
@@ -829,8 +835,107 @@ header button{
        z-index: 2;
     }
 
+    .tillnow{
+        margin-left: 5vw;
+        margin-top: 5vh;
+        margin-bottom: 4vw;
+        border-bottom: 1px solid white;  
+    }
+    .tillnow h1{
+        font-size: larger;
+        left: 2%;
+    }
+   
+    .projects-showcase{ position: relative;
+        margin-top: 20%;
+        display: block;
+       
+    }
+    .projects-showcase h1{
+        font-size: larger;
+        margin-left: 5vw;
+        display: inline-block;
+        border-bottom: 1px solid white;
+        margin-bottom: 10%;
+        
+    }
+     
+    .showcase{
+        padding: 35px 5px 25px 25px;
+        width: 100%;
+        border-bottom: 1px solid white;
+        position: relative;
+        height: 100px;
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    .showcase .box {
+        transition: all ease 0.4s;
+        position:absolute;
+        height: 100%;
+        width: 100%;
+        left: 0%;
+        top: -100%;
+        border-radius: 50%;
+        background-color: #14c990;
+        z-index: -1;
+    }
+     
+    .showcase:hover .box{
+        top:0%;
+        border-radius: 0%;
+        transition: all ease 0.4s;
+    }
+    .page3{
+    display: none;
+
+    }
+
+    .videocard{
+        /* display: block; */
+        background: #000;
+        position:fixed;
+        bottom: 26%;
+        left: 50%;
+        height: 30vh;
+        width: 22vh;
+        border-radius: 10%;
+        overflow: hidden;
+        z-index: 3;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+       
+    }
+    .videocard img,
+    .videocard video{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius:10% ;
+      
+      
+
+    }
+    
+
+    
+        
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* styles.css */
 

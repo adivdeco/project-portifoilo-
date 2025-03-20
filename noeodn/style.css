@@ -1,0 +1,1016 @@
+*{
+    padding: -1%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    height: -1;
+    width: -1;
+    background-color:#000000;
+}
+
+.page1{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    animation: pageup 5s ease-in-out 1 forwards ;
+    z-index: 99;
+    overflow: hidden;
+}
+@keyframes pageup {
+    0%{
+       top: 0%; 
+       opacity: 1;
+    }
+    70%{
+        
+        
+        opacity: 1;
+    }
+    100%{
+        
+        opacity: 0;
+        display: none;
+    }
+}
+.container{
+    width: 300px;
+    height:100px ;
+    
+    position: relative;
+    top: -10%;
+    z-index: 100;
+
+}
+
+.container svg path { 
+    fill: transparent;
+    stroke: #02f7ff;
+    stroke-width: 0.1;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: textanime 4s ease-in-out 1 forwards;
+    
+}
+/* helow animation */
+
+@keyframes textanime {
+    0%{
+        stroke-dashoffset: 50;
+    }
+    70%{
+        fill: transparent;
+    }
+    100%{
+        fill: #fff;
+        stroke-dashoffset: 0;
+        
+    }
+}
+/* hellow anim p jo circle hai us ka animation */
+
+.background{
+    height: 400px;
+    width:400px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    box-shadow: 0px 0px 4000px 50px rgba(7, 225, 173, 0.621),
+    inset 0px 0px 1600px 30px rgb(7, 185, 229);;
+    animation: circle 4s alternate infinite;
+   
+}
+
+@keyframes circle {
+    0%{
+        transform: translate(10px,300px);
+    }
+    100%{
+        transform:translate(0px,10px);
+    }
+}
+
+.page2{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, #012d38, #01422d, #013441, #013210, #013537);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* home page p jo background mmove kr rah hai uska animation hai . */
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+}
+/* page2 k andar ka box  */
+.container2{
+    height: 92%;
+    width: 97%;
+    /* background-color: #121212; */
+    border-radius: 2%;
+    padding: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* jisme logo or setting hai us ka container hai */
+header{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    position: relative;
+    /* top: 10px; */
+    background-color:transparent;
+    backdrop-filter: blur(5px);
+    /* -webkit-backdrop-filter: blur(10px); */
+    background-image:linear-gradient(120deg,
+    rgba(252, 249, 249, 0.2),
+    rgba(0, 0, 0, 0.2)) ;
+    background-size: 20px ;
+    
+    width: 100%;
+    z-index: 20;
+    height: 4.8vw;
+    
+    
+}
+
+.logo{
+    position: relative;
+    left: 5%;
+    align-items: center;
+    justify-content: center;
+    display:flex
+}
+/*   logo ka animation... */
+
+.logo svg path { 
+    fill: transparent;
+    stroke: #0eeac5fe;
+    stroke-width: 0.1;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation-delay: 3s;
+    animation: textanime 4s ease-in-out infinite  4.2s alternate ;
+}
+@keyframes textanime {
+    0%{
+        stroke-dashoffset: 50;
+    }
+    50%{
+        fill: transparent;
+    }
+    100%{
+        fill: #fff;
+        stroke-dashoffset: 0;
+        
+    }
+}
+
+
+
+.setting{
+  position: relative;
+  right: 12%;
+  display: flex;
+  gap: 30px;
+  /* background-color: #013210; */
+  align-items: center;
+  justify-content: center;
+  display:flex
+}
+header button{
+    padding: 5px;
+    width: 70px;
+    height: 26px;
+    font-size: 15px;
+    border: none;
+    border-radius: 40%;
+    
+}  
+  .spot {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+  .svg-wrapper {
+    margin-top: 0;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 3px;
+    margin-left: 5px;
+    margin-right: 5px
+ } 
+  #shape {
+    stroke-width: 6px;
+    fill: transparent;
+    stroke: #fd0000;
+    stroke-dasharray: 85 400;
+    stroke-dashoffset: -220;
+    transition: 1s all ease;
+}  
+  #text {
+    margin-top: -35px;
+    text-align: center;
+}  
+  #text a {
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 1.1em;
+} 
+  .svg-wrapper:hover #shape {
+    stroke-dasharray: 50 0;
+    stroke-width: 3px;
+    stroke-dashoffset: 0;
+    stroke: #06D6A0;
+}
+
+
+/* container k andar walla or header k niche wala  */
+.content{
+    height: 93%;
+    width: 100%;
+    background-color: rgba(18, 18, 18,1);
+    color: white;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-radius:10px;
+}
+
+/* left part of content  */
+.picture1{
+
+    height: 100%;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.ovale2{
+    height: 15vw;
+    width: 15vw;
+    border-radius: 50%;
+    background-color: transparent;position: absolute;
+    box-shadow: 0px 0px 200px 50px rgba(3, 225, 173, 0.621),
+    inset 0px 0px 100px 10px rgb(7, 185, 229);
+    top: 12%;
+    animation: ghum 9s ease-in-out 2s infinite alternate-reverse ;
+    left: 49%;
+    z-index: 9;
+    
+    
+}
+@keyframes ghum {
+    0%{
+        transform: translate(20%,100%);
+    }
+    50%{
+        transform: translate(50%,10%);
+    }
+    100%{
+        transform: translate(90%,-30%); 
+    }
+}
+
+.rectangle img{
+    height: 33vw;
+    width: 31vw;
+    position: relative;
+    /* left: -34%; */
+    top: -4%;
+    
+}
+
+/* right side of content part.. */
+.information{
+    width: 65%;
+}
+
+.information h1{
+    position: relative;
+    left: -10%;
+    letter-spacing: 5px;
+    font-family:system-ui, -apple-system, 
+    BlinkMacSystemFont, 'Segoe UI', Roboto,
+     Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+     'Helvetica Neue', sans-serif ;
+     font-size: 3.2vw;
+}
+
+.information p{
+    position: relative;
+    left: 10%;
+    letter-spacing: 2px;
+    font-family: cursive;
+    width: 80%;
+}
+.information h1 a{
+    color: aquamarine;
+    text-shadow: 2px 3px 20px aquamarine;
+}
+
+/* social media container */
+.socialmedia{
+    display: flex;
+    position: relative;
+    left: 10%;
+    margin-top: 5%;
+    /* background-color: #121212; */
+    font-size: 2vw;  gap: 2vw;
+    
+}
+/* socoal media box.. */
+.socialmedia li{
+    list-style: none;
+    height: 50px;
+    margin: 0 10px;
+    width: 50px;
+    position: relative;
+    
+    background-color: #091921;
+    border-radius: 50%;
+    display: inline-flex;
+    cursor: pointer;
+    box-shadow: -1px -1px 3px rgba(244, 26, 26),
+                 -2px -2px 6px rgba(0, 0,0);
+}
+/* to bring one more circle in background or make it more fantastic */
+.socialmedia li::before{
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    height: 45px;
+    width: 45px;
+    transform: translate(-50%,-50%);
+    background-color: #091921;
+    border-radius: 50%;
+    box-shadow: inset -3px -1px 3px rgba(255, 255,255,0.1),
+              inset  2px 2px 6px rgba(177, 46, 46, 0.821)  ;
+} 
+
+.socialmedia li:hover{
+    background-color: aquamarine;
+    box-shadow: 0px 0px 10px 7px aquamarine;
+
+}
+/* yha p aanimation add krna hai ..yaad se kr dena .. */
+
+.socialmedia li a{
+   color: #b6bbc5;
+   font-size: 25px;
+   width: 100%;
+   line-height: 54px;
+   position: relative;
+   left: 12px;
+   z-index: 2;
+}
+
+/* page3 */
+
+.page3{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, #012d38, #01422d, #013441, #013210, #013537);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;  
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* page3 k andar ka container  */
+.banner{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /* overflow: hidden; */
+    position: relative;
+    top:20% ;
+}
+
+.stark {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: -30%;
+    left: 7%;
+    scale: 0.75;
+    border-radius: 50%; /* Make it a circle */
+    z-index: 1; /* Ensure it stays on top */
+    transform-style: preserve-3d;
+    transform: perspective(500px);
+}
+
+/* center of wheel..  */
+.banner .slider{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 20%;
+    left: calc(50% - 100px);
+    background-color: transparent;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    animation: autorun 30s linear infinite  ;
+    z-index: 2;
+}
+@keyframes autorun {
+    from{
+        transform: perspective(2500px)rotatex(-10deg) rotateY(0deg); 
+    }
+    to{
+        transform: perspective(2500px) rotatex(-10deg) rotateY(360deg);
+    }
+}
+/* psges which rotates */
+.banner .slider .projects{
+    position:absolute;
+    width: 250px;
+    height: 300px;
+    background-color: #011220;
+    inset: 0 0 0 0;
+    transform: 
+    rotateY(calc( (var(--position) - 1) * (360 / var(--quantity))*1deg))
+    translateZ(550px);
+    color: white;
+    /* overflow: hidden; */
+}
+
+.banner .slider .projects img,
+.banner .slider .projects video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .slider .projects img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+.page4{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, #012d38, #01422d, #013441, #013210, #013537);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;  
+    color: #fff;
+    padding-top:10vw ;
+    display: inline-block;
+    
+   
+}
+
+
+.movingpart{
+    overflow-x :auto;
+    white-space: nowrap;
+  
+}
+ .movingpart::-webkit-scrollbar{
+    display: none;
+}
+
+.movingpart h1{
+    font-size: 4vw;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.gol{
+    height:1.5vw;
+    width:1.5vw;
+    border-radius: 50%;
+    background-color: #fe320e;
+    display: inline-block;
+    margin: 0vw  2vw 0vw 2vw;
+    
+} 
+.cnt{
+    padding-top: 6%;
+    white-space: nowrap;
+    display: inline-block;
+    overflow-x :auto;
+    animation: move 20s infinite linear ;
+}
+
+@keyframes move{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.tillnow{
+    margin-left: 2vw;
+    display: inline-block;
+    margin-bottom: -
+    4vw;
+    /* padding-left: 30px; */
+    border-bottom: 2px solid white;
+  
+    
+}
+.tillnow h1{
+    font-weight: 400;
+    position:relative;
+    left: 0%;
+}
+.projects-showcase{
+    display: none;
+}
+.videocard{
+    display: none;
+}
+
+/* responsive-ness.. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (max-width: 400px) {
+    
+    
+    
+    /* hellow anim p jo circle hai us ka animation */
+    
+    .background{
+        height: 350px;
+        width:350px;
+        animation: circle 5s alternate infinite;
+       
+    }
+    
+    @keyframes circle {
+        0%{
+            transform: translate(0px,-100px);
+        }
+        100%{
+            transform:translate(0px,50px);
+        }
+    }
+    
+    .page2{
+        width: 100vw;
+        height: 95vh;
+    }    
+   
+    
+   .page2 h1 {
+        font-size: 3em;
+        text-align: center;
+    }
+    /* page2 k andar ka box  */
+    .container2{
+        height: 100%;
+        padding-top: 30px;
+        /* padding-bottom: 50px; */
+        width: 97%;
+        overflow: hidden;
+    }
+    
+    /* jisme logo or setting hai us ka container hai */
+    header{
+        background-size: 20px ;       
+        height: 12vw; 
+        
+    }
+    
+    .logo{
+        left: -10.9%;
+        scale: 0.7;
+        
+    }
+
+    /* setting k andar walla container ji m home vegra hai */
+    .setting{
+      display:none
+    }
+
+    /* header button{
+        padding: 5px;
+        width: 30px;
+        height: 26px;
+        font-size: 15px;
+        border: none;
+        border-radius: 40%;
+        
+        
+    }   */
+      /* .spot {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      } */
+      
+      /* .svg-wrapper {
+        margin-top: 0;
+        position: relative;
+        width: 150px;
+        height: 40px;
+        display: inline-block;
+        border-radius: 3px;
+        margin-left: 5px;
+        margin-right: 5px
+     } 
+    
+      #text {
+        margin-top: -35px;
+        text-align: center;
+    }  
+      #text a {
+        color: white;
+        text-decoration: none;
+        font-weight: 100;
+        font-size: 1.1em;
+    } 
+      .svg-wrapper:hover #shape {
+        stroke-dasharray: 50 0;
+        stroke-width: 3px;
+        stroke-dashoffset: 0;
+        stroke: #06D6A0;
+    } */
+    
+    
+    /* container k andar walla or header k niche wala  */
+    .content{
+        display:block;
+        align-items: center;
+        height: fit-content;
+        padding-bottom:60px ;
+        /* padding-top: 40px; */
+    }
+    
+    /* left part of content  */
+    .picture1{
+        height: 30vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background: #d43c3c; */
+    }
+    
+    .ovale2{
+        box-shadow: 30px 10px 160px 90px rgba(3, 225, 173, 0.621),
+        inset 0px 0px 100px 0px rgba(7, 185, 229,0.8);
+        top: 42%;  
+        
+    }
+    @keyframes ghum {
+        0%{
+            transform: translate(20%,100%);
+        }
+        50%{
+            transform: translate(50%,10%);
+        }
+        100%{
+            transform: translate(90%,-30%); 
+        }
+    }
+    
+    .rectangle img{
+        height: 63vw;
+        width: 61vw;
+        position: relative;
+        /* left: -34%; */
+        top: -4%;
+        
+    }
+    
+    /* right side of content part.. */
+    .information{
+        width: 100%;
+        /* background: #7f2121; */
+    }
+    
+    .information h1{
+        position: relative;
+        left: 0%;
+        margin-top: 7%;
+        letter-spacing: 5px;
+        font-family:system-ui, -apple-system, 
+        BlinkMacSystemFont, 'Segoe UI', Roboto,
+         Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+         'Helvetica Neue', sans-serif ;
+         font-size: 3.2vw;
+    }
+    
+    .information p{
+        position: relative;
+        left: 11%;
+        letter-spacing: 2px;
+        font-family: cursive;
+        width: 80%;
+        text-align: center;
+    }
+    .information h1 a{
+        color: aquamarine;
+        /* text-shadow: 2px 7px 60px  aquamarine; */
+        font-size: larger;
+        text-shadow: 0 0 2px aquamarine, 0 0 10px aquamarine, 0 0 80px aquamarine, 0 0 80px aquamarine;
+    }
+    
+    /* social media container */
+    .socialmedia{
+        display: flex;
+        position: absolute;
+        left: 10%;
+       top: 0%;
+        margin-top: 5%;
+        font-size: 2vw;  gap: 2vw;
+        
+    }
+    /* socoal media box.. */
+    .socialmedia li{
+        list-style: none;
+        height: 50px;
+        margin: 0 10px;
+        width: 50px;
+        position: relative;
+        
+        background-color: #091921;
+        border-radius: 50%;
+        display: inline-flex;
+        cursor: pointer;
+        box-shadow: -1px -1px 3px rgba(244, 26, 26),
+                     -2px -2px 6px rgba(0, 0,0);
+    }
+    /* to bring one more circle in background or make it more fantastic */
+    .socialmedia li::before{
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 50%;
+        height: 45px;
+        width: 45px;
+        transform: translate(-50%,-50%);
+        background-color: #091921;
+        border-radius: 50%;
+        box-shadow: inset -3px -1px 3px rgba(255, 255,255,0.1),
+                  inset  2px 2px 6px rgba(177, 46, 46, 0.821)  ;
+    } 
+    
+    .socialmedia li:hover{
+        background-color: aquamarine;
+        box-shadow: 0px 0px 10px 7px aquamarine;
+    
+    }
+    /* yha p aanimation add krna hai ..yaad se kr dena .. */
+    
+    .socialmedia li a{
+       color: #b6bbc5;
+       font-size: 25px;
+       width: 100%;
+       line-height: 54px;
+       position: relative;
+       left: 12px;
+       z-index: 2;
+    }
+
+    .tillnow{
+        margin-left: 5vw;
+        margin-top: 5vh;
+        margin-bottom: 4vw;
+        border-bottom: 1px solid white;  
+    }
+    .tillnow h1{
+        font-size: larger;
+        left: 2%;
+    }
+   
+    .projects-showcase{ position: relative;
+        margin-top: 20%;
+        display: block;
+       
+    }
+    .projects-showcase h1{
+        font-size: larger;
+        margin-left: 5vw;
+        display: inline-block;
+        border-bottom: 1px solid white;
+        margin-bottom: 10%;
+        
+    }
+     
+    .showcase{
+        padding: 35px 5px 25px 25px;
+        width: 100%;
+        border-bottom: 1px solid white;
+        position: relative;
+        height: 100px;
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    .showcase .box {
+        transition: all ease 0.4s;
+        position:absolute;
+        height: 100%;
+        width: 100%;
+        left: 0%;
+        top: -100%;
+        border-radius: 50%;
+        background-color: #14c990;
+        z-index: -1;
+    }
+     
+    .showcase:hover .box{
+        top:0%;
+        border-radius: 0%;
+        transition: all ease 0.4s;
+    }
+    .page3{
+    display: none;
+
+    }
+
+    .videocard{
+        /* display: block; */
+        background: #000;
+        position:fixed;
+        bottom: 26%;
+        left: 50%;
+        height: 30vh;
+        width: 22vh;
+        border-radius: 10%;
+        overflow: hidden;
+        z-index: 3;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+       
+    }
+    .videocard img,
+    .videocard video{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius:10% ;
+      
+      
+
+    }
+    
+
+    
+        
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* styles.css */
+
+/* contact section.. */
+.contact-form-container {
+    background-color: #1e1e1e;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    max-width: -1;
+    width: 100%;
+}
+
+.contact-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #f2f2f2;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2c2c2c;
+    color: #f2f2f2;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border: 2px solid #f2a365;
+}
+
+.submit-btn {
+    background-color: #20e5f7;
+    color: #121212;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #17ec85;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

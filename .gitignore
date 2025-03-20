@@ -3,3 +3,5 @@ src/
 
 # Ignore the css folder
 
+# Ignore all .mov files
+*.mov

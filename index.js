@@ -64,19 +64,21 @@ function shuffle(arr){
 }
 console.log(shuffle(arr));
 
-// const arr = [1,2,3,4,5,6,7,8,9,10]
-// function shuffle(arr) {
-//     for (let i = arr.length - 1; i > 0; i--) {
-//         // Generate a random index between 0 and i (inclusive)
-//         let j = Math.floor(Math.random() * (i + 1));
+const arr2 = [1,2,3,4,5,6,7,8,9,10]
+function shuffle(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+        // Generate a random index between 0 and i (inclusive)
+        let j = Math.floor(Math.random() * (i + 1));
       
         
-//         // Swap the elements at index i and j
-//         [arr[i], arr[j]] = [arr[j], arr[i]];
-//     }
-//     return arr;
-// }
-// console.log(shuffle(arr));
+        // Swap the elements at index i and j
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr2;
+}
+console.log(shuffle(arr2));
+
+
 
 let a = Math.floor( Math.random() * 10 );
 console.log(a);

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap');
+
+:root {
+  /* Neo-Brutalist Colors */
+  --color-obsidian: #050505;
+  --color-obsidian-light: #111111;
+  --color-electric-cobalt: #1E40AF;
+  --color-cobalt-glow: rgba(30, 64, 175, 0.4);
+  --color-bismuth: linear-gradient(135deg, #ff0055, #0055ff, #00ff55);
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #aaaaaa;
+
+  /* Typography */
+  --font-family: 'Inter', sans-serif;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 2rem;
+  --text-hero: 6rem;
+  --text-hero-mobile: 3.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-obsidian);
+  color: var(--color-text-primary);
+  font-family: var(--font-family);
+  overflow-x: hidden;
+}
+
+/* Base Utility Classes */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Glassmorphism Classes */
+.glass {
+  background: rgba(17, 17, 17, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-gradient {
+  background: var(--color-bismuth);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

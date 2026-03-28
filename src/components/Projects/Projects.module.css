@@ -1,0 +1,169 @@
+.projectSection {
+  position: relative;
+  width: 100%;
+  min-height: 150vh;
+  padding: 10rem 5vw;
+  background-color: var(--color-obsidian);
+  z-index: 2;
+}
+
+.sectionTitle {
+  font-size: var(--text-hero-mobile);
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+  letter-spacing: -0.05em;
+  position: sticky;
+  top: 10vh;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 8rem;
+  }
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .projectGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+.column, .columnOffset {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+@media (min-width: 768px) {
+  .columnOffset {
+    margin-top: 15vh;
+  }
+}
+
+/* Monolith Card Styling */
+.monolith {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  background: rgba(30, 64, 175, 0.05); /* Slight cobalt tint */
+}
+
+.monolithInner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.frontFace, .backFace {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.frontFace {
+  background: var(--color-obsidian-light);
+  border: 1px solid rgba(255,255,255,0.1);
+  z-index: 2;
+  transform-origin: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uiMockupPlaceholder {
+  text-align: center;
+}
+
+.uiMockupPlaceholder h3 {
+  font-size: var(--text-xl);
+  margin-bottom: 1rem;
+}
+
+.uiMockupPlaceholder p {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.backFace {
+  z-index: 1;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.8);
+}
+
+.schematicView h4 {
+  font-size: var(--text-lg);
+  color: var(--color-electric-cobalt);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.schematicView ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.schematicView li {
+  font-family: monospace;
+  background: rgba(30, 64, 175, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--color-text-primary);
+  border: 1px solid rgba(30, 64, 175, 0.5);
+}
+
+.desc {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+.exploreBtn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--color-text-primary);
+  color: var(--color-obsidian);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exploreBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255,255,255,0.2);
+}

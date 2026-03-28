@@ -1,0 +1,7 @@
+/* App specific styles will go here if needed, but mostly using inline/css modules */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}

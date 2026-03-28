@@ -1,0 +1,36 @@
+.dockContainer {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: flex-end;
+  height: 120px; /* buffer for hover expansion */
+}
+
+.dock {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.dockIcon {
+  height: 60px;
+  background-color: var(--color-obsidian-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.dockIcon:hover {
+  background-color: var(--color-electric-cobalt);
+}

@@ -1,0 +1,121 @@
+.contactSection {
+  width: 100%;
+  padding: 10rem 5vw;
+  background-color: var(--color-obsidian);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.contactContainer {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .contactContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.textContent {
+  max-width: 500px;
+}
+
+.title {
+  font-size: var(--text-hero-mobile);
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  letter-spacing: -0.05em;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 5rem;
+  }
+}
+
+.subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.inputGroup label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-electric-cobalt);
+  font-weight: 800;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--color-text-primary);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  border-color: var(--color-electric-cobalt);
+  box-shadow: 0 0 15px rgba(30, 64, 175, 0.3);
+}
+
+.inputGroup textarea {
+  resize: vertical;
+}
+
+.submitBtn {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1.5rem;
+  background: var(--color-text-primary);
+  color: var(--color-obsidian);
+  font-family: var(--font-family);
+  font-size: 1.1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+  background: var(--color-electric-cobalt);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(30, 64, 175, 0.4);
+}

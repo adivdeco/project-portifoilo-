@@ -1,0 +1,13 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-bismuth);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 9999;
+  filter: blur(2px) drop-shadow(0 0 10px rgba(30, 64, 175, 0.8));
+}

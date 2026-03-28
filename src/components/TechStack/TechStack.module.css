@@ -1,0 +1,73 @@
+.techSection {
+  width: 100vw;
+  padding: 8rem 0;
+  background-color: var(--color-obsidian);
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.title {
+  font-size: var(--text-xl);
+  text-align: center;
+  margin-bottom: 4rem;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+.marqueeContainer {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.track {
+  display: flex;
+  min-width: 200%; /* Ensure track can hold two identical groups */
+  animation: scroll 40s linear infinite;
+}
+
+.marqueeGroup {
+  display: flex;
+  gap: 2rem;
+  padding-right: 2rem; /* Buffer to match gap */
+  align-items: center;
+}
+
+.techPill {
+  padding: 1rem 3rem;
+  border-radius: 4rem;
+  font-size: var(--text-lg);
+  font-weight: 800;
+  white-space: nowrap;
+  background: rgba(30, 64, 175, 0.1);
+  color: var(--color-text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.techPill:hover {
+  background: var(--color-electric-cobalt);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(30, 64, 175, 0.5);
+  color: #fff;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* Move half the track (one group) to seamlessly reset */
+  }
+}
